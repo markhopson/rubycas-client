@@ -64,7 +64,7 @@ module CASClient
 
       end
 
-      ACTIVE_RECORD_TICKET_STORE = ActiveRecordTicketStore
+      ::ACTIVE_RECORD_TICKET_STORE = ActiveRecordTicketStore
 
       class ServiceTicketAwareSession < ActiveRecord::SessionStore::Session
         before_save :save_service_ticket
