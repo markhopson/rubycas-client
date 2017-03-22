@@ -9,7 +9,7 @@ module CASClient
       # Proxy Granting Tickets and their IOUs are stored in the cas_pgtious table.
       #
       # This ticket store takes the following config parameters
-      # :pgtious_table_name - the name of the table 
+      # :pgtious_table_name - the name of the table
       class ActiveRecordTicketStore < AbstractTicketStore
 
         def initialize(config={})
@@ -17,7 +17,7 @@ module CASClient
           if config[:pgtious_table_name]
             CasPgtiou.set_table_name = config[:pgtious_table_name]
           end
-          ActiveRecord::SessionStore.session_class = ServiceTicketAwareSession
+          ActionDispatch::Session::ActiveRecordStore.session_class = ServiceTicketAwareSession
         end
 
         def store_service_session_lookup(st, controller)
@@ -76,7 +76,7 @@ module CASClient
         end
 
         def self.find_by_session_id(session_id)
-          self.find :first, :conditions => {:session_id=>session_id}
+          self.where(:session_id=>session_id).first
         end
       end
 
