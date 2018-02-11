@@ -1,3 +1,7 @@
+<b>Please Note</b>: If you plan to use <b>Flipp SSO</b>, then consider using {github.com/wishabi/flipp-rack-cas}[https://github.com/wishabi/flipp-rack-cas] instead; it is on {Artifactory}[https://flipplib.jfrog.io/flipplib/webapp/#/artifacts/browse/tree/General/flipp-gems-local/gems/flipp-rack-cas-1.0.0.gem], and comes bundled with the Flipp UserPermissions helper, so your project will not need the admin-shared.git submodule (yay).
+
+---
+
 {<img src="https://secure.travis-ci.org/rubycas/rubycas-client.png" alt="Build Status" />}[http://travis-ci.org/rubycas/rubycas-client]
 {<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/rubycas/rubycas-client]
 
